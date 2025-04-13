@@ -11,23 +11,6 @@ If you love the simplicity and performance of `styled-jsx` but prefer the ergono
 
 ---
 
-## 🚀 Installation
-> ⚠️ Requires [`styled-jsx`](https://www.npmjs.com/package/styled-jsx) to be installed and configured in your app.
-
-
-With **Yarn**:
-```bash
-yarn add styled-components-jsx
-```
-
-With **npm**:
-```bash
-npm install styled-components-jsx
-```
-
-
----
-
 ## ✨ Basic Usage
 
 ```tsx
@@ -73,8 +56,78 @@ This library wraps your styles using `styled-jsx`, giving you:
 - Support for both DOM elements and custom React components
 - Automatic prop filtering (`$`-prefixed props are stripped from DOM)
 
+---
+
+## 🚀 Installation
+
+> ⚠️ This package requires [`styled-jsx`](https://www.npmjs.com/package/styled-jsx) to be installed and properly processed by Babel.  
+> If you're using **Next.js**, it works with minimal configuration. For other setups (Vite, Webpack, etc.), you may need to configure Babel manually.
+
+Install with **Yarn**:
+
+```bash
+yarn add styled-components-jsx
+```
+
+Or with **npm**:
+
+```bash
+npm install styled-components-jsx
+```
 
 ---
+
+### ✅ If you're using **Next.js**
+
+Make sure to enable transpilation for this package inside your `next.config.js`:
+
+```js
+// next.config.js
+const nextConfig = {
+  transpilePackages: ['styled-components-jsx'],
+}
+
+module.exports = nextConfig
+```
+
+This ensures that `styled-components-jsx` is properly handled by Next.js' Babel pipeline, including the `styled-jsx` plugin.
+
+---
+
+### ⚠️ If you're **not using Next.js**
+
+You must ensure that your Webpack (or Vite/Rollup) build pipeline:
+
+- Applies **Babel** to `node_modules/styled-components-jsx`
+- Includes the [`styled-jsx/babel`](https://www.npmjs.com/package/styled-jsx#with-babel) plugin
+
+Here's a minimal Babel config example:
+
+```json
+{
+  "presets": ["@babel/preset-react", "@babel/preset-typescript"],
+  "plugins": ["styled-jsx/babel"]
+}
+```
+
+And in Webpack:
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        include: /node_modules\/styled-components-jsx/,
+        use: 'babel-loader',
+      },
+    ],
+  },
+}
+```
+
+---
+
 
 ## 🛠 Configuration
 

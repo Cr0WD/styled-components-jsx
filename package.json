@@ -1,0 +1,101 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "name": "styled-components-jsx",
+  "author": {
+    "email": "freshcrowd@gmail.com",
+    "name": "Denis Orlov",
+    "url": "https://github.com/Cr0WD"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cr0WD/styled-components-jsx"
+  },
+  "keywords": [
+    "css",
+    "styling",
+    "babel-plugin-macros",
+    "styled-jsx",
+    "styled-components",
+    "css-in-js",
+    "react",
+    "reactjs",
+    "react-typescript",
+    "typescript"
+  ],
+  "module": "dist/styled-components-jsx.esm.js",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "lint": "tsdx lint",
+    "prepare": "install-peers && tsdx build",
+    "postinstall": "manypkg fix && manypkg check"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "trailingComma": "es5",
+    "semi": false,
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "arrowParens": "avoid",
+    "endOfLine": "lf",
+    "useTabs": true,
+    "tabWidth": 4
+  },
+  "publishConfig": {
+    "access": "public",
+    "branches": [
+      "master"
+    ]
+  },
+  "peerDependencies": {
+    "@types/react": "^18.0.0 ||^19.0.0",
+    "react": "^18.0.0 ||^19.0.0",
+    "react-dom": "^18.0.0 ||^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@eslint/js": "9.24.0",
+    "@manypkg/cli": "0.23.0",
+    "@next/eslint-plugin-next": "^15.3.0",
+    "@types/react": "^18.0.0 ||^19.0.0",
+    "@types/react-dom": "^19.1.2",
+    "@types/styled-jsx": "3.4.4",
+    "@typescript-eslint/eslint-plugin": "8.29.1",
+    "@typescript-eslint/parser": "8.29.1",
+    "eslint": "9.24.0",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-import-resolver-typescript": "4.3.2",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-promise": "7.2.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-security": "3.0.1",
+    "eslint-plugin-unicorn": "58.0.0",
+    "husky": "^9.1.7",
+    "install-peers-cli": "^2.2.0",
+    "prettier": "3.5.3",
+    "react": "^18.0.0 ||^19.0.0",
+    "react-dom": "^18.0.0 ||^19.0.0",
+    "semantic-release": "24.2.3",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.8.1",
+    "typescript": "5.8.3",
+    "typescript-eslint": "^8.29.1"
+  }
+}

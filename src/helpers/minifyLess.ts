@@ -18,5 +18,3 @@ export function minifyLess(lessString: string): string {
 		.replaceAll(semicolonRegex, '}') // Remove extra semicolons before closing braces
 		.trim() // Trim spaces from the beginning and end
 }
-
-console.log('test')

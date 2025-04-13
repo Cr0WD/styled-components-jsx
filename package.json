@@ -46,7 +46,7 @@
   "publishConfig": {
     "access": "public",
     "branches": [
-      "master"
+      "main"
     ]
   },
   "peerDependencies": {

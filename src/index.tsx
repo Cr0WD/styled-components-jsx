@@ -50,7 +50,6 @@ const createStyled =
 
 		// Ensure Component is a valid React component or HTML tag
 		const Element: ElementType = Component
-		const content = `.${classNameReference}{${minifyLess(processedStyles)}}`
 
 		return (
 			<>
@@ -60,7 +59,11 @@ const createStyled =
 				>
 					{properties.children}
 				</Element>
-				<style jsx>{content}</style>
+				<style jsx>{`
+					.${classNameReference} {
+						${minifyLess(processedStyles)}
+					}
+				`}</style>
 			</>
 		)
 	}

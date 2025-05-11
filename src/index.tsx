@@ -55,7 +55,13 @@ const createStyled =
 			<>
 				<Element
 					{...filteredProperties}
-					className={[properties.className, classNameReference].filter(Boolean).join(' ')}
+					className={Array.from(
+						new Set(
+							[properties.className, classNameReference]
+								.filter((c): c is string => typeof c === 'string')
+								.flatMap(c => c.split(' '))
+						)
+					).join(' ')}
 				>
 					{properties.children}
 				</Element>

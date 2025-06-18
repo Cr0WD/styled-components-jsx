@@ -21,7 +21,7 @@ const filterDollarProperties = <T extends Record<string, unknown>>(properties: T
 /**
  * Base function to create styled components.
  *
- * @param Component - An HTML tag (e.g., "div", "button") or a React component.
+ * @param Component - An HTML tag (e.g. "div", "button") or a React component.
  * @returns A function that takes CSS styles and returns a styled component.
  */
 const createStyled =
@@ -49,7 +49,7 @@ const createStyled =
 			: filterDollarProperties(properties)
 
 		// Ensure Component is a valid React component or HTML tag
-		const Element: ElementType = Component
+		const Element = Component as ElementType<{ className?: string }>
 
 		return (
 			<>

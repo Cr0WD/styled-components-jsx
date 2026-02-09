@@ -1,93 +1,93 @@
 {
-  "version": "1.0.6",
-  "license": "MIT",
-  "name": "styled-components-jsx",
-  "type": "module",
-  "author": {
-    "email": "freshcrowd@gmail.com",
-    "name": "Denis Orlov",
-    "url": "https://github.com/Cr0WD"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Cr0WD/styled-components-jsx"
-  },
-  "keywords": [
-    "css",
-    "styling",
-    "babel-plugin-macros",
-    "styled-jsx",
-    "styled-components",
-    "css-in-js",
-    "react",
-    "reactjs",
-    "react-typescript",
-    "typescript"
-  ],
-  "main": "./src/index.tsx",
-  "types": "./src/index.tsx",
-  "files": [
-    "src"
-  ],
-  "scripts": {
-    "postinstall": "manypkg fix && manypkg check"
-  },
-  "prettier": {
-    "printWidth": 100,
-    "trailingComma": "es5",
-    "semi": false,
-    "singleQuote": true,
-    "bracketSpacing": true,
-    "arrowParens": "avoid",
-    "endOfLine": "lf",
-    "useTabs": true,
-    "tabWidth": 4
-  },
-  "publishConfig": {
-    "access": "public",
-    "branches": [
-      "main"
-    ]
-  },
-  "peerDependencies": {
-    "@types/react": "^19.2.13",
-    "@types/styled-jsx": "^3.0.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "styled-jsx": "^5.1.7"
-  },
-  "peerDependenciesMeta": {
-    "@types/react": {
-      "optional": true
-    },
-    "@types/styled-jsx": {
-      "optional": true
-    }
-  },
-  "devDependencies": {
-    "@eslint/js": "10.0.1",
-    "@manypkg/cli": "0.25.1",
-    "@types/react": "^19.2.13",
-    "@types/react-dom": "^19.2.3",
-    "@types/styled-jsx": "3.4.4",
-    "@typescript-eslint/eslint-plugin": "8.54.0",
-    "@typescript-eslint/parser": "8.54.0",
-    "eslint": "10.0.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-import-resolver-typescript": "4.4.4",
-    "eslint-plugin-import": "2.32.0",
-    "eslint-plugin-jsx-a11y": "6.10.2",
-    "eslint-plugin-promise": "7.2.1",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-security": "3.0.1",
-    "eslint-plugin-unicorn": "62.0.0",
-    "prettier": "3.8.1",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "styled-jsx": "^5.1.7",
-    "typescript": "5.9.3",
-    "typescript-eslint": "^8.54.0"
-  },
-  "packageManager": "yarn@1.22.22"
+	"version": "1.0.7",
+	"license": "MIT",
+	"name": "styled-components-jsx",
+	"type": "module",
+	"author": {
+		"email": "freshcrowd@gmail.com",
+		"name": "Denis Orlov",
+		"url": "https://github.com/Cr0WD"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Cr0WD/styled-components-jsx"
+	},
+	"keywords": [
+		"css",
+		"styling",
+		"babel-plugin-macros",
+		"styled-jsx",
+		"styled-components",
+		"css-in-js",
+		"react",
+		"reactjs",
+		"react-typescript",
+		"typescript"
+	],
+	"main": "./src/index.tsx",
+	"types": "./src/index.tsx",
+	"files": [
+		"src"
+	],
+	"scripts": {
+		"postinstall": "manypkg fix && manypkg check"
+	},
+	"prettier": {
+		"printWidth": 100,
+		"trailingComma": "es5",
+		"semi": false,
+		"singleQuote": true,
+		"bracketSpacing": true,
+		"arrowParens": "avoid",
+		"endOfLine": "lf",
+		"useTabs": true,
+		"tabWidth": 4
+	},
+	"publishConfig": {
+		"access": "public",
+		"branches": [
+			"main"
+		]
+	},
+	"peerDependencies": {
+		"@types/react": "^19.2.13",
+		"@types/styled-jsx": "^3.0.0",
+		"react": "^19.2.4",
+		"react-dom": "^19.2.4",
+		"styled-jsx": "^5.1.7"
+	},
+	"peerDependenciesMeta": {
+		"@types/react": {
+			"optional": true
+		},
+		"@types/styled-jsx": {
+			"optional": true
+		}
+	},
+	"devDependencies": {
+		"@eslint/js": "10.0.1",
+		"@manypkg/cli": "0.25.1",
+		"@types/react": "^19.2.13",
+		"@types/react-dom": "^19.2.3",
+		"@types/styled-jsx": "3.4.4",
+		"@typescript-eslint/eslint-plugin": "8.54.0",
+		"@typescript-eslint/parser": "8.54.0",
+		"eslint": "10.0.0",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-import-resolver-typescript": "4.4.4",
+		"eslint-plugin-import": "2.32.0",
+		"eslint-plugin-jsx-a11y": "6.10.2",
+		"eslint-plugin-promise": "7.2.1",
+		"eslint-plugin-react": "^7.37.5",
+		"eslint-plugin-react-hooks": "^7.0.1",
+		"eslint-plugin-security": "3.0.1",
+		"eslint-plugin-unicorn": "62.0.0",
+		"prettier": "3.8.1",
+		"react": "^19.2.4",
+		"react-dom": "^19.2.4",
+		"styled-jsx": "^5.1.7",
+		"typescript": "5.9.3",
+		"typescript-eslint": "^8.54.0"
+	},
+	"packageManager": "yarn@1.22.22"
 }

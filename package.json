@@ -1,5 +1,5 @@
 {
-	"version": "1.0.7",
+	"version": "1.0.9",
 	"license": "MIT",
 	"name": "styled-components-jsx",
 	"type": "module",
@@ -10,7 +10,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Cr0WD/styled-components-jsx"
+		"url": "git+https://github.com/Cr0WD/styled-components-jsx.git"
 	},
 	"keywords": [
 		"css",
@@ -44,10 +44,7 @@
 		"tabWidth": 4
 	},
 	"publishConfig": {
-		"access": "public",
-		"branches": [
-			"main"
-		]
+		"access": "public"
 	},
 	"peerDependencies": {
 		"@types/react": "^19.2.13",

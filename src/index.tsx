@@ -1,6 +1,14 @@
 import React, { ElementType, JSX, ReactNode } from 'react'
 import { minifyLess } from './helpers/minifyLess'
 
+// Extend React types to support styled-jsx attributes
+declare module 'react' {
+	interface StyleHTMLAttributes<T> extends React.HTMLAttributes<T> {
+		jsx?: boolean
+		global?: boolean
+	}
+}
+
 /**
  * Type definition for the styled function.
  * Supports both HTML elements and React components.
@@ -26,53 +34,53 @@ const filterDollarProperties = <T extends Record<string, unknown>>(properties: T
  */
 const createStyled =
 	<T extends ElementType>(Component: T): StyledComponent<T> =>
-	(styles, ...interpolations) =>
-	properties => {
-		// Non-removable class reference for this plugin
-		const classNameReference = '🎨'
+		(styles, ...interpolations) =>
+			properties => {
+				// Non-removable class reference for this plugin
+				const classNameReference = '🎨'
 
-		// Process styles and replace interpolations with actual prop values
-		const processedStyles = styles
-			.map((style, index) => {
-				const interpolation = interpolations[index]
-				const value =
-					typeof interpolation === 'function'
-						? interpolation(properties)
-						: (interpolation ?? '')
-				return style + value
-			})
-			.join('')
+				// Process styles and replace interpolations with actual prop values
+				const processedStyles = styles
+					.map((style, index) => {
+						const interpolation = interpolations[index]
+						const value =
+							typeof interpolation === 'function'
+								? interpolation(properties)
+								: (interpolation ?? '')
+						return style + value
+					})
+					.join('')
 
-		const isCustomComponent = typeof Component !== 'string'
-		const filteredProperties = isCustomComponent
-			? properties
-			: filterDollarProperties(properties)
+				const isCustomComponent = typeof Component !== 'string'
+				const filteredProperties = isCustomComponent
+					? properties
+					: filterDollarProperties(properties)
 
-		// Ensure Component is a valid React component or HTML tag
-		const Element = Component as ElementType<{ className?: string }>
+				// Ensure Component is a valid React component or HTML tag
+				const Element = Component as ElementType<{ className?: string }>
 
-		return (
-			<>
-				<Element
-					{...filteredProperties}
-					className={Array.from(
-						new Set(
-							[properties.className, classNameReference]
-								.filter((c): c is string => typeof c === 'string')
-								.flatMap(c => c.split(' '))
-						)
-					).join(' ')}
-				>
-					{properties.children}
-				</Element>
-				<style jsx>{`
+				return (
+					<>
+						<Element
+							{...filteredProperties}
+							className={Array.from(
+								new Set(
+									[properties.className, classNameReference]
+										.filter((c): c is string => typeof c === 'string')
+										.flatMap(c => c.split(' '))
+								)
+							).join(' ')}
+						>
+							{properties.children}
+						</Element>
+						<style jsx>{`
 					.${classNameReference} {
 						${minifyLess(processedStyles)}
 					}
 				`}</style>
-			</>
-		)
-	}
+					</>
+				)
+			}
 
 /**
  * Utility type for mapping styled properties to common HTML elements.

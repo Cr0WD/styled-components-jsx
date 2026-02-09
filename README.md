@@ -243,6 +243,8 @@ Under the hood, it's powered by a custom function that processes all styles simi
 - Fully typed components and props
 - Autocomplete for tag names and styles
 - Works seamlessly with React 18+
+- Includes type definitions for `styled-jsx` attributes (`jsx`, `global`)
+- No additional configuration needed - types work out of the box
 
 ---
 

@@ -49,8 +49,8 @@
 	"peerDependencies": {
 		"@types/react": "^19.2.14",
 		"@types/styled-jsx": "^3.0.0",
-		"react": "^19.2.4",
-		"react-dom": "^19.2.4",
+		"react": "^19.2.5",
+		"react-dom": "^19.2.5",
 		"styled-jsx": "^5.1.7"
 	},
 	"peerDependenciesMeta": {
@@ -67,8 +67,8 @@
 		"@types/react": "^19.2.14",
 		"@types/react-dom": "^19.2.3",
 		"@types/styled-jsx": "3.4.4",
-		"@typescript-eslint/eslint-plugin": "8.58.0",
-		"@typescript-eslint/parser": "8.58.0",
+		"@typescript-eslint/eslint-plugin": "8.58.1",
+		"@typescript-eslint/parser": "8.58.1",
 		"eslint": "10.2.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-import-resolver-typescript": "4.4.4",
@@ -79,12 +79,12 @@
 		"eslint-plugin-react-hooks": "^7.0.1",
 		"eslint-plugin-security": "4.0.0",
 		"eslint-plugin-unicorn": "64.0.0",
-		"prettier": "3.8.1",
-		"react": "^19.2.4",
-		"react-dom": "^19.2.4",
+		"prettier": "3.8.2",
+		"react": "^19.2.5",
+		"react-dom": "^19.2.5",
 		"styled-jsx": "^5.1.7",
 		"typescript": "6.0.2",
-		"typescript-eslint": "^8.58.0"
+		"typescript-eslint": "^8.58.1"
 	},
 	"packageManager": "yarn@1.22.22"
 }

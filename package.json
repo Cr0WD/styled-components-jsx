@@ -30,18 +30,11 @@
 		"src"
 	],
 	"scripts": {
-		"postinstall": "manypkg fix && manypkg check"
-	},
-	"prettier": {
-		"printWidth": 100,
-		"trailingComma": "es5",
-		"semi": false,
-		"singleQuote": true,
-		"bracketSpacing": true,
-		"arrowParens": "avoid",
-		"endOfLine": "lf",
-		"useTabs": true,
-		"tabWidth": 4
+		"postinstall": "manypkg fix && manypkg check",
+		"lint": "oxlint -c .oxlintrc.json .",
+		"lint:fix": "oxlint -c .oxlintrc.json --fix .",
+		"format": "oxfmt .",
+		"format:check": "oxfmt . --check"
 	},
 	"publishConfig": {
 		"access": "public"
@@ -62,29 +55,20 @@
 		}
 	},
 	"devDependencies": {
-		"@eslint/js": "10.0.1",
 		"@manypkg/cli": "0.25.1",
 		"@types/react": "^19.2.15",
 		"@types/react-dom": "^19.2.3",
 		"@types/styled-jsx": "3.4.4",
-		"@typescript-eslint/eslint-plugin": "8.60.0",
-		"@typescript-eslint/parser": "8.60.0",
 		"eslint": "10.4.1",
-		"eslint-config-prettier": "^10.1.8",
 		"eslint-import-resolver-typescript": "4.4.5",
 		"eslint-plugin-import": "2.32.0",
-		"eslint-plugin-jsx-a11y": "6.10.2",
-		"eslint-plugin-promise": "7.3.0",
-		"eslint-plugin-react": "^7.37.5",
-		"eslint-plugin-react-hooks": "^7.1.1",
 		"eslint-plugin-security": "4.0.0",
-		"eslint-plugin-unicorn": "64.0.0",
-		"prettier": "3.8.3",
+		"oxfmt": "0.52.0",
+		"oxlint": "1.67.0",
 		"react": "^19.2.6",
 		"react-dom": "^19.2.6",
 		"styled-jsx": "^5.1.7",
-		"typescript": "6.0.3",
-		"typescript-eslint": "^8.60.0"
+		"typescript": "6.0.3"
 	},
 	"packageManager": "yarn@1.22.22"
 }

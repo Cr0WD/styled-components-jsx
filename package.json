@@ -40,10 +40,10 @@
 		"access": "public"
 	},
 	"peerDependencies": {
-		"@types/react": "^19.2.18",
+		"@types/react": "^19.3.0",
 		"@types/styled-jsx": "^3.0.0",
-		"react": "^19.2.8",
-		"react-dom": "^19.2.8",
+		"react": "^19.3.0",
+		"react-dom": "^19.3.0",
 		"styled-jsx": "^5.1.7"
 	},
 	"peerDependenciesMeta": {
@@ -56,17 +56,17 @@
 	},
 	"devDependencies": {
 		"@manypkg/cli": "0.25.1",
-		"@types/react": "^19.2.18",
-		"@types/react-dom": "^19.2.7",
+		"@types/react": "^19.3.0",
+		"@types/react-dom": "^19.3.0",
 		"@types/styled-jsx": "3.4.4",
-		"eslint": "10.9.1",
+		"eslint": "10.10.0",
 		"eslint-import-resolver-typescript": "4.4.5",
 		"eslint-plugin-import": "2.32.0",
 		"eslint-plugin-security": "4.0.1",
-		"oxfmt": "0.66.0",
-		"oxlint": "1.81.0",
-		"react": "^19.2.8",
-		"react-dom": "^19.2.8",
+		"oxfmt": "0.67.0",
+		"oxlint": "1.82.0",
+		"react": "^19.3.0",
+		"react-dom": "^19.3.0",
 		"styled-jsx": "^5.1.7",
 		"typescript": "7.0.2"
 	},
